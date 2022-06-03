@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = require('./routes')
+var cors = require('cors')
 const bodyParser = require('body-parser')
 const errorhandler = require('errorhandler')
 
@@ -18,6 +19,9 @@ let store = {
 }
 
 let app = express()
+
+app.use(cors())
+
 
 app.use(bodyParser.json())
 app.use(errorhandler())
