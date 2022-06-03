@@ -31,14 +31,14 @@ app.use((req, res, next) => {
     next()
 })
 
-app.get('/posts', routes.posts.getPosts)
-app.post('/posts', routes.posts.addPost)
-app.put('/posts/:postId', routes.posts.updatePost)
-app.delete('/posts/:postId', routes.posts.removePost)
+app.get('/api/posts', routes.posts.getPosts)
+app.post('/api/posts', routes.posts.addPost)
+app.put('/api/posts/:postId', routes.posts.updatePost)
+app.delete('/api/posts/:postId', routes.posts.removePost)
 
-app.get('/posts/:postId/comments', routes.comments.getComments)
-app.post('/posts/:postId/comments', routes.comments.addComment)
-app.put('/posts/:postId/comments/:commentId', routes.comments.updateComment)
-app.delete('/posts/:postId/comments/:commentId', routes.comments.removeComment)
+app.get('/api/posts/:postId/comments', routes.comments.getComments)
+app.post('/api/posts/:postId/comments', routes.comments.addComment)
+app.put('/api/posts/:postId/comments/:commentId', routes.comments.updateComment)
+app.delete('/api/posts/:postId/comments/:commentId', routes.comments.removeComment)
 
 app.listen(3000)
